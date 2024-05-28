@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Purchase</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/IMAGES/mbe-style-coffee-256.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/Styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4 highlight">Purchase Form</h1>
+        <form>
+            <div class="form-group">
+                <label for="name" class="highlight">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname" class="highlight">Surname:</label>
+                <input type="text" class="form-control" id="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="country" class="highlight">Country:</label>
+                <input type="text" class="form-control" id="country" required>
+            </div>
+            <div class="form-group">
+                <label for="city" class="highlight">City:</label>
+                <input type="text" class="form-control" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="direction" class="highlight">Direction:</label>
+                <input type="text" class="form-control" id="direction" required>
+            </div>
+            <div class="form-group">
+                <label for="zip" class="highlight">Zip Code:</label>
+                <input type="number" class="form-control" id="zip" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="highlight">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" required pattern="[0-9]{10}">
+            </div>
+            <div class="form-group">
+                <label for="cc-number" class="highlight">Credit Card Number:</label>
+                <input type="number" class="form-control" id="cc-number" required>
+            </div>
+            <div class="form-group">
+                <label for="cc-name" class="highlight">Credit Card Name:</label>
+                <input type="text" class="form-control" id="cc-name" required>
+            </div>
+            <div class="form-group d-flex justify-content-start">
+
+                <button type="button" class="btn btn-primary" onclick="confirmPurchase()">Confirm Buy</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='/index.html'">Cancel</button>
+                <button type="button" id="printPdf" class="btn btn-info" onclick="printPDF()" style="display:none;">Descargar PDF</button>
+                <button type="button" id="backHome" class="btn btn-warning" onclick="window.location.href='/index.html'" style="display:none;">Volver a inicio</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="/JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
